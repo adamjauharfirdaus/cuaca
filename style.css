@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .input-group input {
     padding: 10px;
     font-size: 16px;
@@ -44,4 +45,52 @@
     width: 50px;
     height: 50px;
   }
+=======
+.input-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 70%;
+  }
+  
+  .input-group button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: #66a6ff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .input-group button:hover {
+    background: #549dff;
+  }
+  
+  #weather {
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #weather h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #weather p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  #weather img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+  }
+>>>>>>> 82ca651ea944e8483301f39419d773642d5c23c3
   
