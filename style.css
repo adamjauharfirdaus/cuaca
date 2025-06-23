@@ -1,4 +1,27 @@
-.input-group input {
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -21,11 +44,7 @@
     background: #549dff;
   }
   
-  #weather {
-    margin-top: 20px;
-  }
-  
-  .hidden {
+  #weather.hidden {
     display: none;
   }
   
