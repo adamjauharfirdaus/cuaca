@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Ambil elemen DOM
 const cityInput = document.getElementById("city");
 const getWeatherButton = document.getElementById("getWeather");
@@ -8,10 +7,9 @@ const temperatureDisplay = document.getElementById("temperature");
 const descriptionDisplay = document.getElementById("description");
 const iconDisplay = document.getElementById("icon");
 
-// API Key OpenWeather (ganti dengan API key Anda)
+// Ganti API_KEY dengan milikmu dari https://openweathermap.org
 const API_KEY = "d35ca7d97164d5db30aaf912afd15f5d";
 
-// Fungsi untuk mengambil data cuaca
 async function getWeather(city) {
   try {
     const response = await fetch(
@@ -21,18 +19,17 @@ async function getWeather(city) {
 
     const data = await response.json();
 
-    // Update DOM dengan data cuaca
     locationDisplay.textContent = `${data.name}, ${data.sys.country}`;
     temperatureDisplay.textContent = `Suhu: ${data.main.temp}°C`;
     descriptionDisplay.textContent = `Kondisi: ${data.weather[0].description}`;
     iconDisplay.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
     weatherDisplay.classList.remove("hidden");
   } catch (error) {
     alert(error.message);
   }
 }
 
-// Tambahkan event listener pada tombol
 getWeatherButton.addEventListener("click", () => {
   const city = cityInput.value.trim();
   if (city) {
@@ -41,47 +38,3 @@ getWeatherButton.addEventListener("click", () => {
     alert("Harap masukkan nama kota!");
   }
 });
-=======
-// Ambil elemen DOM
-const cityInput = document.getElementById("city");
-const getWeatherButton = document.getElementById("getWeather");
-const weatherDisplay = document.getElementById("weather");
-const locationDisplay = document.getElementById("location");
-const temperatureDisplay = document.getElementById("temperature");
-const descriptionDisplay = document.getElementById("description");
-const iconDisplay = document.getElementById("icon");
-
-// API Key OpenWeather (ganti dengan API key Anda)
-const API_KEY = "d35ca7d97164d5db30aaf912afd15f5d";
-
-// Fungsi untuk mengambil data cuaca
-async function getWeather(city) {
-  try {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
-    );
-    if (!response.ok) throw new Error("Kota tidak ditemukan!");
-
-    const data = await response.json();
-
-    // Update DOM dengan data cuaca
-    locationDisplay.textContent = `${data.name}, ${data.sys.country}`;
-    temperatureDisplay.textContent = `Suhu: ${data.main.temp}°C`;
-    descriptionDisplay.textContent = `Kondisi: ${data.weather[0].description}`;
-    iconDisplay.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    weatherDisplay.classList.remove("hidden");
-  } catch (error) {
-    alert(error.message);
-  }
-}
-
-// Tambahkan event listener pada tombol
-getWeatherButton.addEventListener("click", () => {
-  const city = cityInput.value.trim();
-  if (city) {
-    getWeather(city);
-  } else {
-    alert("Harap masukkan nama kota!");
-  }
-});
->>>>>>> 82ca651ea944e8483301f39419d773642d5c23c3
